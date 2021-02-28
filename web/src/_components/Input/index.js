@@ -33,6 +33,11 @@ export default function Input ({
 		e.target.blur();
 	};
 
+	const onPaste = e => {
+		e.preventDefault();
+		e.target.value = (e.clipboardData || window.clipboardData).getData('text').replace(/[\r\n]/g, ' ');
+	};
+
 	return (
 		<div className={cls(css.wrap, {
 			[css.focus]: hasFocus,
@@ -45,6 +50,7 @@ export default function Input ({
 				onFocus={onFocus}
 				onBlur={onBlur}
 				onKeyPress={onKeyPress}
+				onPaste={onPaste}
 			/>
 		</div>
 	);
