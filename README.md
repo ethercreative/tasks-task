@@ -14,6 +14,7 @@ Here's a rough guide for what you need to do:
   task input according to the design.
 - Display due dates on tasks as per the design, and have it change appearance 
   depending on whether it is upcoming, due soon, or late.
+- Sort active tasks by due date, then date created.
 
 ## Setup
 
