@@ -35,7 +35,10 @@ export default function Input ({
 
 	const onPaste = e => {
 		e.preventDefault();
-		e.target.value = (e.clipboardData || window.clipboardData).getData('text').replace(/[\r\n]/g, ' ');
+		e.target.value = (e.clipboardData || window.clipboardData)
+			.getData('text')
+			.replace(/\s+/g, ' ');
+		onInput(e);
 	};
 
 	return (
