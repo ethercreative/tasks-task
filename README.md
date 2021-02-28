@@ -19,7 +19,7 @@ Here's a rough guide for what you need to do:
 ## Setup
 
 ### API
-In `api` directory:
+In the `api` directory:
 
 1. Copy `.env.example` into `.env`
 1. Install node modules `$ yarn install`
@@ -27,9 +27,9 @@ In `api` directory:
 1. Migrate the schema `$ make migrate`
 
 ### Web
-In `web` directory:
+In the `web` directory:
 
-1. Install docker modules `$ yarn install`
+1. Install node modules `$ yarn install`
 1. Start development server `$ yarn start`
   
 ## Useful Links
