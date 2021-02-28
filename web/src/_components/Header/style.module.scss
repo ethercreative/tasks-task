@@ -1,0 +1,33 @@
+@import "../../style/variables";
+
+.header {
+	margin-bottom: size(56);
+
+	h1 {
+		position: relative;
+		margin-bottom: size(15);
+
+		font-size: size(40);
+		font-weight: bold;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: size(16);
+			right: 100%;
+			margin-right: size(48);
+
+			display: block;
+			width: size(12);
+			height: size(20);
+
+			background: url(../../_svg/Back.svg) center;
+			background-size: cover;
+		}
+	}
+
+	p {
+		color: $text-muted;
+		font-size: size(20);
+	}
+}

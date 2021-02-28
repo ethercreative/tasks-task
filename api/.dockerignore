@@ -1,0 +1,5 @@
+*
+!.docker
+!package.json
+!yarn.lock
+!.yarn-cache.tgz

@@ -1,0 +1,36 @@
+@import "../../style/variables";
+
+@keyframes spin {
+	from { transform: rotate(0deg) }
+	to { transform: rotate(360deg) }
+}
+
+.spin {
+	position: fixed;
+	top: size(15);
+	left: size(15);
+
+	opacity: 0;
+	transform: scale(0);
+	pointer-events: none;
+	transition: transform 0.15s $ease-in-out-back, opacity 0.15s ease;
+
+	&::before {
+		content: '';
+		display: block;
+		width: size(25);
+		height: size(25);
+
+		border: size(3) solid $border-color;
+		border-top-color: transparent;
+		border-radius: 50%;
+
+		animation: spin 1s infinite linear;
+	}
+}
+
+.show {
+	opacity: 1;
+	transform: scale(1);
+	transition-delay: 0.25s;
+}

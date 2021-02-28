@@ -1,0 +1,19 @@
+@import "../../style/variables";
+
+.empty {
+	padding: size(16);
+	margin-bottom: size(8);
+
+	color: $text-muted;
+	text-align: center;
+
+	border: size(1) solid #1C1C1C;
+	border-radius: size(16);
+}
+
+.error {
+	margin-bottom: size($spacer/2);
+
+	color: #FF6B5E;
+	border-color: #FF6B5E;
+}

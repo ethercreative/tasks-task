@@ -1,0 +1,11 @@
+@import "../../style/variables";
+
+.wrap {
+	padding: size(120) size($spacer);
+}
+
+.container {
+	width: 100%;
+	max-width: size(680);
+	margin: auto;
+}

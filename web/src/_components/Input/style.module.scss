@@ -1,0 +1,38 @@
+@import "../../style/variables";
+
+.wrap {
+	position: relative;
+	z-index: 2;
+	margin-bottom: size($spacer);
+
+	border: size(2) solid $border-color;
+	border-radius: size(16);
+
+	overflow: hidden;
+	transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.input {
+	width: 100%;
+	padding: size(17) size(22);
+
+	color: #000;
+	font-size: size(24);
+	line-height: 1.4em;
+
+	appearance: none;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	resize: none;
+
+	&::placeholder {
+		color: $border-color;
+	}
+}
+
+.focus {
+	background-color: #fff;
+	border-color: #fff;
+}

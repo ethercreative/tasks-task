@@ -1,0 +1,16 @@
+FROM postgres:12
+
+RUN apt-get update \
+  && apt-get install -y \
+    wget \
+    libpq-dev \
+    make \
+    gcc \
+    libcurl4-gnutls-dev \
+    postgresql-server-dev-12 \
+    unzip \
+    git \
+  && git clone https://github.com/eulerto/wal2json.git \
+  && cd wal2json \
+  && USE_PGXS=1 make \
+  && USE_PGXS=1 make install

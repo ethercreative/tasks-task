@@ -1,0 +1,41 @@
+@import "variables";
+@import "reset";
+
+* {
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	box-sizing: border-box;
+	font-family: $font-family;
+}
+
+html {
+	height: 100%;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	scroll-behavior: smooth;
+
+	@include responsiveSize(14, 16);
+	font-family: $font-family;
+	font-weight: normal;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	position: relative;
+	min-height: 100%;
+
+	color: $text-color;
+	text-underline-offset: 0.1rem;
+
+	background-color: $background-color;
+	overflow-x: hidden;
+
+	&.ReactModal__Body--open {
+		overflow: hidden;
+	}
+}
+
+::selection {
+	color: $text-color;
+	background-color: fade_out($primary, 0.3);
+}

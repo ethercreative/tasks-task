@@ -1,0 +1,39 @@
+version: '3.7'
+services:
+
+  db:
+    build:
+      context: .
+      dockerfile: ./.docker/postgres
+    volumes:
+      - ./.docker/postgresql.conf:/etc/postgresql.conf:delegated
+      - ./.data/db:/var/lib/postgresql/data:delegated
+    environment:
+      - POSTGRES_DB=${PGDATABASE}
+      - POSTGRES_USER=${PGUSER}
+      - POSTGRES_PASSWORD=${PGPASSWORD}
+    command: postgres -c config_file=/etc/postgresql.conf
+    restart: unless-stopped
+
+  graph:
+    build:
+      context: .
+      dockerfile: ./.docker/postgraphile
+    volumes:
+      - ./src/index.js:/home/node/app/index.js:delegated
+      - ../schema.graphql:/home/node/app/schema.graphql:delegated
+      - /home/node/app/node_modules
+    depends_on:
+      - db
+    ports:
+      - "5001:5000"
+    env_file: .env
+    command: [ "pm2-runtime", "index.js" ]
+    working_dir: /home/node/app
+    restart: unless-stopped
+
+  adminer:
+    image: adminer
+    restart: unless-stopped
+    ports:
+      - "5002:8080"
