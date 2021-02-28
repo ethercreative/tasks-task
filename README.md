@@ -8,13 +8,13 @@ Add due dates to tasks.
 ### Steps
 Here's a rough guide for what you need to do:
  
-- Add a due date column to the `tasks` table. This should be non-destructive, so 
+- [ ] Add a due date column to the `tasks` table. This should be non-destructive, so 
   don't drop the table.
-- Add a date picker (any will do, as long as it fits the look of the app) to the
+- [ ] Add a date picker (any will do, as long as it fits the look of the app) to the
   task input according to the design.
-- Display due dates on tasks as per the design, and have it change appearance 
+- [ ] Display due dates on tasks as per the design, and have it change appearance 
   depending on whether it is upcoming, due soon, or late.
-- Sort active tasks by due date, then date created.
+- [ ] Sort active tasks by due date, then date created.
 
 ## Setup
 
