@@ -36,7 +36,6 @@ grant execute on all functions in schema public to anonymous;
 -- Tasks
 -- -----------------------------------------------------------------------------
 
-drop table if exists public.tasks;
 create table if not exists public.tasks (
   id         uuid primary key default public.uuid_generate_v1mc(),
   text       text not null,
