@@ -75,3 +75,6 @@ In the `web` directory:
 ### SASS
 This project uses SASS (but we also use LESS on older projects). This project 
 uses a helper function `size()` to convert `px` to `rem`.
+
+### Postgraphile
+The project uses a GraphQL API, automatically generated based of the DB schema by [Postgraphile](https://www.graphile.org/postgraphile/). If you want to update the API, make a change to the `schema/public.sql` file and migrate it (`make migrate`).
