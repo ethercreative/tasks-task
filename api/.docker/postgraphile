@@ -5,6 +5,6 @@ WORKDIR /home/node/app/
 COPY package.json ./
 
 RUN yarn --quiet \
-  && yarn global add nodemon;
+  && yarn global add nodemon pm2;
 
 USER node
